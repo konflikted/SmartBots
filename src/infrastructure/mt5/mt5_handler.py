@@ -12,19 +12,19 @@ from os.path import join, exists
 
 @check_api_key(
     [
-        "MT4_HOST",
+        "MTX_HOST",
         "CLIENT_IF",
         "PUSH_PORT",
         "DATA_DIR",
     ]
 )
 def get_client(conf_port):
-    """Get MT4 client.
+    """Get MetaTrader client.
 
     Returns
     -------
     Client
-      MT4 client.
+      MetaTrader client.
     """
     logger.info("Connecting to MetaTrader")
     client = dwx_client(metatrader_dir_path=conf_port['DATA_DIR'])
